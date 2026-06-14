@@ -82,6 +82,41 @@ After skimming the sources, I noticed that the sources have mixed structure in w
 
 ---
 
+---
+---
+
+## Evaluation Results
+
+I ran each of the 5 evaluation questions through the deployed app and compared the system's answer to my expected answer.
+
+### 1. Which ordinance should a player use if they usually play late at night?
+**System answer:** The Night Owl Ordinance is the most suitable for players who usually play late at night, as it makes villagers stay active later and keeps shops open later.
+**Sources retrieved:** Ordinances guide (top 2 matches), Happy Home Paradise guide, Full ACNH island life guide
+**Match to expected answer:** Correct. The system matched my expected answer almost exactly, and the top 2 retrieved chunks both came from the correct source (Ordinances guide).
+
+### 2. What conditions are needed to catch a coelacanth?
+**System answer:** To catch a coelacanth, it must be raining, and it can be found in the sea. It is available all year and all day, as long as it is raining.
+**Sources retrieved:** Fish guide (top 2 matches), Bug guide (2 chunks)
+**Match to expected answer:** Correct. The core conditions (sea, all year, all day, rainy weather) matched my expected answer. The top 2 chunks came from the correct source (Fish guide); the Bug guide chunks ranked lower and were not used in the answer.
+
+### 3. How do you create hybrid flowers?
+**System answer:** Plant compatible flowers near each other and water them, allowing new flowers to grow in open spaces nearby. A checkerboard pattern is often used because it leaves empty spaces for hybrids to appear. Watering increases breeding chance, and visitors watering flowers can improve odds further.
+**Sources retrieved:** Hybrid flowers guide (top 2 matches, lowest distance of all questions at 0.49), Wired ACNH tips, Full ACNH island life guide
+**Match to expected answer:** Correct, and more detailed than my expected answer. The system added extra accurate detail (visitors watering flowers improves odds) that wasn't in my original expected answer but is consistent with the source.
+
+### 4. How does a player access Happy Home Paradise after getting the DLC?
+**System answer:** Restart the game, get a call from Tom Nook, go to the airport, meet Lottie (who introduces the vacation home design job), then talk to Orville and choose to go to work, which sends the player to the Happy Home Paradise area.
+**Sources retrieved:** Happy Home Paradise access guide (top and 3rd matches), ACNH gameplay overview, Villager visits guide
+**Match to expected answer:** Correct. Matches my expected answer step-for-step (Tom Nook call → airport → Lottie → Orville → work). The top retrieved chunk came from the correct source with the lowest distance (0.59) of any non-flower question.
+
+### 5. What can happen when villagers visit the player's house?
+**System answer:** Villagers may comment on furniture/decorations, give the player an item, play a card game, or ask for a tour of different rooms.
+**Sources retrieved:** Villager visits and invites guide (top 2 matches), Full ACNH island life guide, Ordinances guide
+**Match to expected answer:** Mostly correct but slightly incomplete. My expected answer also mentioned that visits can deepen friendship, which the system's answer left out, even though the top source (Villager visits guide) likely covers this. This suggests the chunk containing the friendship detail either wasn't retrieved or was deprioritized.
+
+### Summary
+4 out of 5 questions were fully correct and well grounded in the right source documents, with low retrieval distances (0.49–0.94) for the top chunk in each case. Question 5 was mostly correct but omitted one detail (friendship/relationship effects) from my expected answer, possibly because that information was split into a different chunk than the one retrieved. Overall, the table-heavy sources (fish, ordinances, hybrid flowers, Happy Home Paradise) retrieved especially cleanly, supporting my chunking decision to keep related facts grouped together with overlap.
+
 ## Anticipated Challenges
 
 <!-- What could go wrong? Name at least two specific risks with reasoning.
