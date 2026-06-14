@@ -1,0 +1,112 @@
+Animal Crossing: New Horizons Source Notes
+
+This file contains copied notes and summarized source text from the 10 selected guide pages which will be used as the local document corpus for the RAG pipeline.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 1: Full ACNH island life guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-guide/
+
+Animal Crossing: New Horizons is a life simulation game where the player develops a deserted island into a customized community. Early progression includes gathering materials, crafting tools, catching bugs and fish, earning bells, paying off loans, and helping Tom Nook expand the island. The game encourages daily play because different resources, visitors, shop items, creatures, and events can appear on different days.
+
+Important beginner tasks include collecting wood, stone, weeds, fruit, bugs, and fish. Players use tools such as the axe, shovel, fishing rod, net, ladder, vaulting pole, and watering can to explore and gather resources. Crafting is important because many tools and furniture items are made from materials found around the island.
+
+Island development expands over time. The player starts with a tent and gradually unlocks a house, museum, shop, bridge and incline construction, resident services upgrades, terraforming, and island customization. Players can decorate outdoors, place furniture, move buildings, invite villagers, and improve the island rating.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 2: Fish guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-fish/
+
+Fish in Animal Crossing: New Horizons appear based on location, month, time of day, weather, and hemisphere. Players catch fish using a fishing rod near rivers, ponds, river mouths, clifftop rivers, piers, and the sea. Some fish are available all day, while others only appear during specific hours.
+
+The coelacanth is a rare fish that appears in the sea. It is available all year and all day, but only when it is raining. Because it depends on weather instead of a short time window, players should check the sea during rainy conditions and look for a large fish shadow.
+
+Fishing can be used to fill the museum, earn bells, complete Critterpedia entries, and participate in fishing events. Rare fish are usually more valuable, but they may require specific locations or conditions.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 3: Bug guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-bugs/
+
+Bugs in Animal Crossing: New Horizons appear based on season, month, time, weather, and location. Players catch bugs with a net. Bugs may appear flying in the air, sitting on trees, hiding on flowers, crawling on the ground, resting on tree stumps, or appearing on rocks and palm trees.
+
+Some bugs are common and can be found throughout the day, while rare bugs require more specific conditions. For example, certain beetles appear on palm trees during summer months and may only show up at night. Other bugs appear around flowers or rotten turnips.
+
+Bug catching helps players complete the museum, earn bells, and fill out the Critterpedia. The guide-style information is very fact-heavy because each bug has its own time, month, location, and sale price.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 4: Sea creatures guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-sea-creatures/
+
+Sea creatures are collected by diving in the ocean while wearing a wetsuit. The player swims in the sea and looks for bubbles rising from the water. When bubbles are visible, the player dives underwater to catch the sea creature. Sea creatures have different movement speeds, shadow sizes, active months, and active times.
+
+Like fish and bugs, sea creatures are affected by hemisphere and season. Some are available all day, while others are limited to morning, afternoon, evening, or night. This makes sea creature information table-like because a complete answer often needs the creature name, month, time, shadow, movement speed, and selling price.
+
+Diving adds another collection system to the game. Players can donate sea creatures to the museum, sell them for bells, and complete their Critterpedia. Because sea creature availability changes during the year, players often need specific lookup-style answers.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 5: Hybrid flowers guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-flowers-hybrid-breeding/
+
+Hybrid flowers are created by planting compatible flowers near each other and watering them so new flowers can grow in open spaces nearby. Players often plant flowers in a checkerboard pattern because it leaves empty spaces for hybrids to appear. Watering flowers increases the chance of breeding, and having visitors water flowers can improve the odds even more.
+
+Different flower species and colors can produce different hybrid colors. Basic flower types include roses, tulips, pansies, windflowers, hyacinths, mums, lilies, and cosmos. Hybrid breeding can create colors such as pink, orange, purple, blue, black, and gold depending on the species and parent colors.
+
+The key idea is that flowers need space, compatible parents, and watering. Hybrid breeding can take time because the result is chance-based. Players may need to try multiple layouts or generations of flowers to get rare hybrids.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 6: Ordinances guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-ordinances-guide/
+
+Island ordinances let players adjust island life to better match how they play. Ordinances are managed through Isabelle at Resident Services after the feature is unlocked. They cost bells to enact and affect daily behavior on the island.
+
+The Night Owl Ordinance is useful for players who usually play late at night because it makes villagers stay active later and keeps shops open later. The Early Bird Ordinance is better for players who usually play early in the morning because villagers and shops start earlier.
+
+The Beautiful Island Ordinance helps reduce weeds and makes villagers water flowers more often. The Bell Boom Ordinance increases the amount of bells players receive from selling items, but it can also increase shop prices. Choosing an ordinance depends on the player's schedule and goals.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 7: Villager visits and invites guide
+URL: https://www.gamesradar.com/animal-crossing-new-horizons-villager-visits-invites/
+
+Villagers can visit the player's house or invite the player to visit their house. These events are part of the social side of Animal Crossing: New Horizons and can support friendship with villagers. A villager may ask to come over, appear at the player's home, or invite the player while talking outside.
+
+During a house visit, villagers may comment on the player's furniture and decorations. They can also give the player an item, play a card game, or ask for a tour of different rooms. These visits make villagers feel more interactive and can be one way to build the relationship.
+
+The player can also visit a villager's home. Villager interactions are not only about collecting items; they also help create the feeling of a lived-in island community.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SOURCE 8: Happy Home Paradise access guide
+URL: https://www.gamesradar.com/how-to-access-animal-crossing-new-horizons-happy-home-paradise-dlc/
+
+Happy Home Paradise is the paid DLC for Animal Crossing: New Horizons. To access it, the player needs to buy and download the DLC, then restart the game. After the DLC is available, Tom Nook calls the player and asks them to come to the airport.
+
+At the airport, the player meets Lottie, who introduces the vacation home design job. After this introduction, the player can talk to Orville and choose the option to go to work. This sends the player to the Happy Home Paradise island area where they design vacation homes for clients.
+
+The DLC focuses on decorating and design. Players choose furniture, themes, room layouts, exterior styles, and later unlock more design features. The starting access steps are important because players often have the DLC installed but do not know how to begin the job.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SOURCE 9: Wired ACNH tips
+URL: https://www.wired.com/story/animal-crossing-new-horizons-tips
+
+Animal Crossing: New Horizons rewards daily routines. Useful tips include checking the island each day for resources, fossils, visitors, message bottles, shop items, and money-making opportunities. Players can shake trees, hit rocks, collect fruit, fish, catch bugs, and gather crafting materials.
+
+Inventory management matters because early pockets fill quickly. Players can upgrade pocket space, store items at home, and sell extra materials for bells. It is helpful to keep tools ready because many tasks depend on having the right tool at the right time.
+
+Players can earn bells through fishing, bug catching, selling fruit, selling shells, finding fossils, and using the stalk market. Progress often comes from small repeated tasks rather than one single quest. The game is designed around slow island improvement and daily discoveries.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SOURCE 10: ACNH gameplay overview
+URL: https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons
+
+Animal Crossing: New Horizons is a 2020 social simulation game for the Nintendo Switch. The player moves to a deserted island after buying a getaway package from Tom Nook. The game takes place in real time, meaning the time of day and seasons in the game match the console clock.
+
+The player gathers resources, crafts items, catches fish and bugs, decorates the island, talks to animal villagers, and expands the community. The island can be customized with furniture, paths, flowers, bridges, inclines, buildings, and terraforming. Multiplayer allows players to visit each other's islands.
+
+Progression includes paying loans, upgrading the player's home, developing island facilities, inviting villagers, and improving the island rating. Later updates added features such as ordinances, cooking, expanded decorating, and paid DLC through Happy Home Paradise.
