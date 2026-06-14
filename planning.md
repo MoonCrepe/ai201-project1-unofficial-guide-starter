@@ -8,8 +8,7 @@
 ---
 
 ## Domain
-
-<!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+I chose an unofficial Animal Crossing: New Horizons gameplay guide which is supposed to help players search all kinds of informations about island life. creature collecting, flower breeding, villager interactions, and DLC access. I believe that this is useful because of just how manysmall systems with different rles, times, seasons,basically overally environmental setup along with unlock requirements there are to the game which could make it frustrating at one point for players to figure out especially if they're speedrunning the game first time. Additionally, it is difficult to find these types of informations quickly as they're spread across different guide pages, articles, or youtube videos.
 
 ---
 
@@ -20,17 +19,19 @@
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 |Full ACNH island life guide | Broad guide covering island life, tools, crafting, collecting, characters, events, and progression.  |  https://www.gamesradar.com/animal-crossing-new-horizons-guide/|
+| 2 |Fish guide | Guide to fish availability by hemisphere, month, time, and location.  |  https://www.gamesradar.com/animal-crossing-new-horizons-fish/|
+| 3 |Bug guide  | Guide to bug availability by hemisphere, season, time, and location. | https://www.gamesradar.com/animal-crossing-new-horizons-bugs/|
+| 4 |Sea creatures guide |Guide to diving and sea creature availability by season and time. | https://www.gamesradar.com/animal-crossing-new-horizons-sea-creatures/|
+| 5 | Hybrid flowers guide|  Explanation on flower types, hybrid flower breeding, watering, and planting patterns.|  https://www.gamesradar.com/animal-crossing-new-horizons-flowers-hybrid-breeding/|
+| 6 |Ordinances guide |Explanation on island ordinances, costs, effects, and how to choose one. | https://www.gamesradar.com/animal-crossing-new-horizons-ordinances-guide/|
+| 7 | Villager visits and invites guide  | Explanation on villager house visits, invitations, and friendship related interactions.  |  https://www.gamesradar.com/animal-crossing-new-horizons-villager-visits-invites/|
+| 8 | Happy Home Paradise access guide| Explanations on how to access the Happy Home Paradise DLC and start vacation home design work. | https://www.gamesradar.com/how-to-access-animal-crossing-new-horizons-happy-home-paradise-dlc/|
+| 9 |  Wired ACNH tips| List of practical gameplay tips for inventory, resources, money, visitors, and daily play. | https://www.wired.com/story/animal-crossing-new-horizons-tips|
+| 10 | ACNH gameplay overview | Overview of the game’s systems, progression, crafting, island rating, multiplayer, and updates. Basically a summary of everything important in the game. |https://en.wikipedia.org/wiki/Animal_Crossing%3A_New_Horizons |
 
+
+After skimming the sources, I noticed that the sources have mixed structure in which the sources were written in defferent formats. The fish, bug, and sea creature guides are table heavy and contain many small facts about season, time, and location. In contrast, the ordinances, villager visits, DLC, and tips pages are more paragraph based. Because of this, the chunking strategy needs to preserve complete rows or short sections instead of splitting blindly every fixed number of characters.
 ---
 
 ## Chunking Strategy
@@ -40,11 +41,11 @@
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
-**Chunk size:**
+**Chunk size:**  Roughly 900 characters per chunk
 
-**Overlap:**
+**Overlap:** Around 150 characters
 
-**Reasoning:**
+**Reasoning:** Fow how I will split my documents into chunls. I will start splitting each cleaned document by paragraphs first. Then I will group near paragraphs together until the chunk is roughly 900 characters. If it is long, I will then split it by sentences so that the chunk doesn't become too big and subsequently, I will use around 150 characters of overlap between chunks so that importantdetailys near the end are made to be repeated in the next chunk as well. In general to explain more about the numbers, my sources include both a fact heavy guide section and a paragraph based section, So, a 900 character chunk should be large enough to keep all of the revelvant information such as time, season, and location together. The 150 character overlap will help to prevent important details from being lsot when sections are split across two chunks which is a problem as I don't want chunks that are too small as a row may not contain enough contect for semantic searches. Additionally, I don't want chunks that are too big as it could mix up unrelated topics like fish locations and flower breeding.
 
 ---
 
@@ -56,11 +57,11 @@
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:** all-MiniLM-L6-v2 utilizing a sentece transformer
 
-**Top-k:**
+**Top-k:** 4 chunks per query
 
-**Production tradeoff reflection:**
+**Production tradeoff reflection:** I chose this model because it could run locally, fast enought for class, and most of all, it's free. If this were for production, however, I would have to compare it to stronger embedding models that could retrieve much more accurate results for the detailed game guide questions. Overall, I'd look into accuracy rate, speed, cost, context lenght, and whether or not the model can handle table like texts well. Additionally, sinc ethis project is going to be focused on one game and language in particular, multilingual support is not as important as retrieval quality. If this was a language app then it would be a different case of course.
 
 ---
 
@@ -73,11 +74,11 @@
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | Which ordinance should a player use if they usually play late at night? | The Night Owl Ordinance, because it makes shops stay open later and villagers more active later in the day.|
+| 2 | What conditions are needed to catch a coelacanth in Animal Crossing: New Horizons? | The coelacanth appears in the sea, is available all year and all day, and requires rainy weather. |
+| 3 |  How do you create hybrid flowers? | Plant compatible flowers with space between them, commonly in a checkerboard pattern, and water them regularly so hybrids can grow in open spaces. |
+| 4 |  How does a player access Happy Home Paradise after getting the DLC? | After buying/downloading the DLC and restarting the game, the player gets a call from Tom Nook, goes to the airport, meets Lottie, and chooses to go to work through Orville.  |
+| 5 | What can happen when villagers visit the player’s house? | Villagers may comment on decor, give an item, play a card game, ask for a room tour, and the visit can deepen friendship. |
 
 ---
 
@@ -87,9 +88,9 @@
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. Some guide pages may include navigation text, ads, repeated headings, or unrelated links. If that text gets into the chunks, retrieval might return irrelevant results instead of the actual guide content. I will then need to inspect cleaned documents and sample chunks to make sure the text is useful and relevant.
 
-2.
+2. Some facts may unfortunately be split across chunk boundaries, especially table-\ style information about creatures where the name, time, season, and location all need to stay together. If the chunking separates those details, the system may retrieve only part of the answer. I plan to use paragraph first chunking with overlap and inspect sample chunks before embedding them.
 
 ---
 
@@ -103,6 +104,31 @@
 
 ---
 
+![Hand-drawn pipeline diagram](images/pipeline-diagram.png)
+or
+
+Document Ingestion
+(Python requests + BeautifulSoup)
+        ↓
+Cleaning
+(remove HTML, navigation, ads, repeated whitespace)
+        ↓
+Chunking
+(paragraph-first chunks, ~900 characters, 150 overlap)
+        ↓
+Embedding + Vector Store
+(sentence-transformers all-MiniLM-L6-v2 + ChromaDB)
+        ↓
+Retrieval
+(top 4 chunks by semantic similarity)
+        ↓
+Generation
+(Groq Llama model with grounded prompt)
+        ↓
+Interface
+(Gradio web app)
+
+
 ## AI Tool Plan
 
 <!-- For each part of the pipeline below, describe:
@@ -115,8 +141,8 @@
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
-**Milestone 3 — Ingestion and chunking:**
+**Milestone 3 — Ingestion and chunking:** I plan to use ChatGPT/Codex to help write the Python script that downloads or loads my Animal Crossing guide sources, removes HTML/navigation text, and splits the cleaned text into chunks. I will give it my Domain, Documents, and Chunking Strategy sections as input. I expect it to produce functions for loading documents, cleaning text, and chunking text. I will then verify the output by printing cleaned documents and at least 5 sample chunks to check that they are readable, substantive, and not full of navigation text or broken fragments. 
 
-**Milestone 4 — Embedding and retrieval:**
+**Milestone 4 — Embedding and retrieval:**  I plan to use ChatGPT/Codex to help connect the chunking output to sentence-transformers and ChromaDB. I will give it my Retrieval Approach section, especially the all-MiniLM-L6-v2 model and top-k value of 4. I expect it to produce code that embeds chunks, stores them with source metadata, and retrieves the most relevant chunks for a query. I will verify it by testing at least 3 evaluation questions and checking whether the returned chunks visibly relate to the question.
 
-**Milestone 5 — Generation and interface:**
+**Milestone 5 — Generation and interface:** I plan to use ChatGPT/Codex to help build the grounded response function and a simple Gradio interface. I will give it my Evaluation Plan and the requirement that answers must use only retrieved chunks and cite sources. I expect it to produce an ask function and app interface with a question input, answer output, and source output. I will verify it by asking in-scope and out-of-scope questions and checking that the system cites retrieved documents or refuses to answer when the documents do not contain enough information. 
