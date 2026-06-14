@@ -1,162 +1,86 @@
-# The Unofficial Guide — Project 1
+# Unofficial Animal Crossing: New Horizons Guide
 
-> **How to use this template:**
-> Complete each section *after* you've built and tested the corresponding part of your system.
-> Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
-> Every section below is required for submission. One-liners will not receive full credit.
+A RAG (Retrieval-Augmented Generation) system that answers questions about Animal Crossing: New Horizons gameplay by retrieving information from a collection of online guides and generating grounded answers with source citations.
 
----
+## Project Description
 
-## Domain
+This project answers practical gameplay questions — fish/bug/sea creature availability, hybrid flower breeding, island ordinances, villager interactions, and Happy Home Paradise DLC access by retrieving relevant chunks from 10 ACNH guide sources and generating an answer using a Groq-hosted LLM. Every answer cites the source documents it was grounded in.
 
-<!-- What topic or category of knowledge does your system cover?
-     Why is this knowledge valuable, and why is it hard to find through official channels?
-     Example: "Student reviews of CS professors at [university] — useful because official
-     course descriptions don't reflect teaching style, exam difficulty, or workload." -->
+## Architecture
 
----
+Document Ingestion
+(Python requests + BeautifulSoup)
+        v
+Cleaning
+(remove HTML, navigation, ads, repeated whitespace)
+        v
+Chunking
+(paragraph-first chunks, ~900 characters, 150 overlap)
+        v
+Embedding + Vector Store
+(sentence-transformers all-MiniLM-L6-v2 + ChromaDB)
+        v
+Retrieval
+(top 4 chunks by semantic similarity)
+        v
+Generation
+(Groq Llama model with grounded prompt)
+        v
+Interface
+(Gradio web app)
 
-## Document Sources
+## Setup
 
-<!-- List every source you collected documents from.
-     Be specific: include URLs, subreddit names, forum thread titles, or file names.
-     Aim for variety — sources that together cover different subtopics or perspectives. -->
+1. Clone this repository:
 
-| # | Source | Type | URL or file path |
-|---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+git clone https://github.com/MoonCrepe/ai201-project1-unofficial-guide-starter.git
+cd ai201-project1-unofficial-guide-starter
 
----
+2. Create and activate a virtual environment:
 
-## Chunking Strategy
+python -m venv .venv
 
-<!-- Describe your chunking approach with enough specificity that someone else could reproduce it.
-     Include:
-     - Chunk size (characters or tokens) and why that size fits your documents
-     - Overlap size and why (or why not) you used overlap
-     - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
-     - What your final chunk count was across all documents -->
+Windows: .venv\Scripts\Activate
+Mac/Linux: source .venv/bin/activate
 
-**Chunk size:**
+3. Install dependencies:
 
-**Overlap:**
+pip install -r requirements.txt
 
-**Why these choices fit your documents:**
+4. Set up your Groq API key:
 
-**Final chunk count:**
+cp .env.example .env
 
----
+Then open .env and add your key from console.groq.com:
 
-## Embedding Model
+GROQ_API_KEY=your_key_here
 
-<!-- Name the embedding model you used and explain your choice.
-     Then answer: if you were deploying this system for real users and cost wasn't a constraint,
-     what tradeoffs would you weigh in choosing a different model?
-     Consider: context length limits, multilingual support, accuracy on domain-specific text,
-     latency, and local vs. API-hosted. -->
+## Building the Knowledge Base
 
-**Model used:**
+python pipeline.py
 
-**Production tradeoff reflection:**
+## Running the App
 
----
+python app.py
 
-## Grounded Generation
+Open the local URL shown in the terminal (typically http://127.0.0.1:7860) in your browser.
 
-<!-- Explain how your system enforces grounding — how does it prevent the LLM from answering
-     beyond the retrieved documents?
-     Describe both your system prompt (what instruction you gave the model) and any structural
-     choices (e.g., how you formatted the context, whether you filtered low-relevance chunks).
-     Do not just say "I told it to use the documents" — show the actual instruction or explain
-     the mechanism. -->
+## Example Questions
 
-**System prompt grounding instruction:**
-
-**How source attribution is surfaced in the response:**
-
----
-
-## Evaluation Report
-
-<!-- Run your 5 test questions from planning.md through your system and record the results.
-     Be honest — a partially accurate or inaccurate result that you explain well is more
-     valuable than a suspiciously perfect result. -->
-
-| # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
-|---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-
-**Retrieval quality:** Relevant / Partially relevant / Off-target  
-**Response accuracy:** Accurate / Partially accurate / Inaccurate
-
----
-
-## Failure Case Analysis
-
-<!-- Identify at least one question where retrieval or generation did not work as expected.
-     Write a specific explanation of *why* it failed, tied to a part of the pipeline.
-
-     "The answer was wrong" is not an explanation.
-
-     "The relevant information was split across a chunk boundary, so retrieval returned
-     only half the context — the model didn't have enough to answer correctly" is an explanation.
-
-     "The embedding model treated the professor's nickname as out-of-vocabulary and returned
-     results from an unrelated review" is an explanation. -->
-
-**Question that failed:**
-
-**What the system returned:**
-
-**Root cause (tied to a specific pipeline stage):**
-
-**What you would change to fix it:**
-
----
-
-## Spec Reflection
-
-<!-- Reflect on how planning.md shaped your implementation.
-     Answer both questions with at least 2–3 sentences each. -->
-
-**One way the spec helped you during implementation:**
-
-**One way your implementation diverged from the spec, and why:**
-
----
+- "Which ordinance should a player use if they usually play late at night?"
+- "What conditions are needed to catch a coelacanth?"
+- "How do you create hybrid flowers?"
+- "How does a player access Happy Home Paradise after getting the DLC?"
+- "What can happen when villagers visit the player's house?"
 
 ## AI Usage
 
-<!-- Describe at least 2 specific instances where you used an AI tool during this project.
-     For each: what did you give the AI as input, what did it produce, and what did you
-     change, override, or direct differently?
+I used AI tools throughout this project for planning, coding, and debugging help.
 
-     "I used Claude to help me code" is not sufficient.
-     "I gave Claude my Chunking Strategy section from planning.md and asked it to implement
-     chunk_text(). It returned a function using a fixed character split. I overrode the
-     chunk size from 500 to 200 because my documents are short reviews, not long guides." -->
+Planning: I used ChatGPT to brainstorm domain ideas and an initial source list, which I sorted through myself. After skimming through the sources, I wrote the domain description, source descriptions, and skim notes in planning.md.
 
-**Instance 1**
+Pipeline and app code: I used ChatGPT to help write the document ingestion, chunking, embedding, retrieval, and Gradio interface code, based on the chunking strategy and retrieval approach I specified in planning.md (900-character chunks, 150-character overlap, all-MiniLM-L6-v2 embeddings, top-4 retrieval).
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+Debugging: I used Claude to debug environment setup issues, including a ModuleNotFoundError for gradio and a huggingface-hub version conflict between gradio and transformers, which I resolved by installing a compatible huggingface-hub version. I also got help diagnosing a Groq API authentication error caused by an invalid API key.
 
-**Instance 2**
-
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+Evaluation: I ran my 5 evaluation questions through the deployed app myself, then used Claude to help me organize the results in planning.md. I reviewed each system answer against my expected answer myself before finalizing the assessment.
